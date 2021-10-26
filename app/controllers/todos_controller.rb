@@ -7,4 +7,15 @@ class TodosController < ApplicationController
     id = params[:id]
     render plain: Todo.find(id).to_pleasant_string
   end
+
+  def create
+    todo_text = params[:todo_text]
+    due_date = DateTime.parse(params[:due_date])
+    new_todo = Todo.create!(
+      todo_text: todo_text,
+      due_date: due_date,
+      completed: false
+    )
+    render plain: "New todo has been created with ID #{new_todo.id}"
+  end
 end
