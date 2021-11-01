@@ -3,8 +3,13 @@
   <ul>
   <% todos.all.each do |todo| %>
     <li>
-      <input type="checkbox">
-      <label> <%= todo.todo_text %>
+      <% if todo.completed %>
+        <input type="checkbox" checked>
+        <label class="crossed-out"> <%= todo.todo_text %>
+      <% else %>
+        <input type="checkbox">
+        <label> <%= todo.todo_text %>
+      <% end %>
       <% if show_due_date %>
         <span><%= todo.due_date.to_s(:short) %></span>
       <% end %>

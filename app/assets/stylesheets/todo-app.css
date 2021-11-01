@@ -57,6 +57,10 @@ label {
   padding: 10px;
 }
 
+label.crossed-out {
+  text-decoration: line-through;
+}
+
 label > span {
   color: grey;
   font-size: 14px;
