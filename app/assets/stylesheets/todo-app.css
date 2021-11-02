@@ -45,19 +45,21 @@ h3 > span {
   color: gray;
 }
 
-input[type="checkbox"] {
+label {
+  display: flex;
+  align-items: center;
+  padding: 10px;
   margin-left: 20px;
-  height: 16px;
-  width: 16px;
 }
 
-label {
+label > p {
   font-family: sans-serif;
   font-size: 18px;
-  padding: 10px;
 }
 
-label.crossed-out {
+/* label > p.crossed- */
+/* body > section > ul > li > label > p.crossed-out */
+label > form + p.crossed-out {
   text-decoration: line-through;
 }
 
@@ -71,10 +73,17 @@ label > span.overdue {
   color: red;
 }
 
+input[type="checkbox"] {
+  height: 16px;
+  width: 16px;
+  margin-right: 20px;
+}
+
 i {
   float: right;
   cursor: pointer;
   visibility: hidden;
+  margin-left: 80px;
 }
 
 li {

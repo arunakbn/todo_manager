@@ -3,18 +3,16 @@
   <ul>
   <% todos.all.each do |todo| %>
     <li>
-      <% if todo.completed %>
-        <input type="checkbox" checked>
-        <label class="crossed-out"> <%= todo.todo_text %>
-      <% else %>
-        <input type="checkbox">
-        <label> <%= todo.todo_text %>
-      <% end %>
-      <% if show_due_date %>
-        <span><%= todo.due_date.to_s(:short) %></span>
-      <% end %>
+      <label>
+        <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+          <input type="checkbox" name="completed" <%= todo.completed ? "checked" : " " %> onclick = "this.form.submit()">
+        <% end %>
+        <p <%= todo.completed ? 'class=crossed-out' : '' %>><%= todo.todo_text %></p>
+        <% if show_due_date %>
+          <span><%= todo.due_date.to_s(:short) %></span>
+        <% end %>
+        <i class="far fa-trash-alt"></i>
       </label>
-      <i class="far fa-trash-alt"></i>
     </li>
   <% end %>
 </section>
