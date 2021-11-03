@@ -5,7 +5,7 @@
     <li>
       <label>
         <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-          <input type="checkbox" name="completed" <%= todo.completed ? "checked" : " " %> onclick = "this.form.submit()">
+          <%= check_box_tag "completed", nil, todo.completed, :onclick => "this.form.submit()" %>
         <% end %>
         <p <%= todo.completed ? 'class=crossed-out' : '' %>><%= todo.todo_text %></p>
         <% if show_due_date %>
@@ -17,4 +17,5 @@
       <% end %>
     </li>
   <% end %>
+  </ul>
 </section>

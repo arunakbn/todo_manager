@@ -2,7 +2,8 @@
 
 <%= form_with(url: "/todos", method: "post") do %>
   <%= text_field_tag :todo_text, "", placeholder: "What's next?" %>
-  <input name="due_date" type="date">
+  <%# <input name="due_date" type="date"> %>
+  <%= date_field_tag 'due_date' %>
   <button type="submit">Add</button>
 <% end %>
 
