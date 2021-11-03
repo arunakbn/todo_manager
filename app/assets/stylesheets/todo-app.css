@@ -57,8 +57,6 @@ label > p {
   font-size: 18px;
 }
 
-/* label > p.crossed- */
-/* body > section > ul > li > label > p.crossed-out */
 label > form + p.crossed-out {
   text-decoration: line-through;
 }
@@ -78,13 +76,6 @@ input[type="checkbox"] {
   width: 16px;
   margin-right: 20px;
 }
-
-/* i {
-  float: right;
-  cursor: pointer;
-  visibility: hidden;
-  margin-left: 80px;
-} */
 
 li {
   padding: 10px;
