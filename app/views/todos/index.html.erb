@@ -3,7 +3,8 @@
 <%= form_with(url: "/todos", method: "post") do %>
   <%= text_field_tag :todo_text, "", placeholder: "What's next?" %>
   <%= date_field_tag 'due_date' %>
-  <button type="submit">Add</button>
+  <%# <button type="submit">Add</button> %>
+  <%= button_tag 'Add' %>
 <% end %>
 
 <%= render partial: "todo-section", locals: {

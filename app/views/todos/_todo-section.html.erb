@@ -13,7 +13,8 @@
         <% end %>
       </label>
       <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-        <input type="image" class="trash-icon" src="<%= asset_path 'trash.svg'%>">
+        <%# <input type="image" class="trash-icon" src="<%= asset_path 'trash.svg'%>
+        <%= image_submit_tag("trash.svg", class: 'trash-icon') %>
       <% end %>
     </li>
   <% end %>
