@@ -1,22 +1,24 @@
 <section>
   <h3> <%= section_title %>  <span><%= todos.completed.count %>/<%= todos.count %></span></h3>
   <ul>
-  <% todos.all.each do |todo| %>
-    <li>
-      <label>
-        <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
-          <%= check_box_tag "completed", nil, todo.completed, :onclick => "this.form.submit()" %>
+    <% todos.all.each do |todo| %>
+      <li>
+        <label>
+          <%= form_with(url: "/todos/#{todo.id}", method: "put") do %>
+            <%= check_box_tag "completed", nil, todo.completed, :onclick => "this.form.submit()" %>
+          <% end %>
+
+          <p <%= todo.completed ? 'class=crossed-out' : '' %>><%= todo.todo_text %></p>
+
+          <% if show_due_date %>
+            <span><%= todo.due_date.to_s(:short) %></span>
+          <% end %>
+        </label>
+
+        <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
+          <%= image_submit_tag("trash.svg", class: 'trash-icon') %>
         <% end %>
-        <p <%= todo.completed ? 'class=crossed-out' : '' %>><%= todo.todo_text %></p>
-        <% if show_due_date %>
-          <span><%= todo.due_date.to_s(:short) %></span>
-        <% end %>
-      </label>
-      <%= form_with(url: "/todos/#{todo.id}", method: "delete") do %>
-        <%# <input type="image" class="trash-icon" src="<%= asset_path 'trash.svg'%>
-        <%= image_submit_tag("trash.svg", class: 'trash-icon') %>
-      <% end %>
-    </li>
-  <% end %>
+      </li>
+    <% end %>
   </ul>
 </section>
