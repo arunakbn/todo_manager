@@ -1,0 +1,33 @@
+.form-item {
+  margin-bottom: 20px;
+}
+
+.new-users-title {
+  font-size: 32px;
+  margin: 40px 0;
+  font-family: sans-serif;
+}
+
+.form-input {
+  font-size: 16px;
+  padding: 8px;
+  font-family: sans-serif;
+  margin-top: 0;
+}
+
+.form-label {
+  margin-left: 0;
+  color: rgb(41, 41, 41);
+  font-family: sans-serif;
+  display: block;
+}
+
+.form-submit {
+  font-size: 16px;
+  padding: 8px;
+  background-color: rgb(146, 243, 146);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: sans-serif;
+}

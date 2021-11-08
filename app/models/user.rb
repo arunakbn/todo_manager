@@ -1,5 +1,8 @@
 class User < ActiveRecord::Base
-  def to_pleasant_string
-    "#{name} #{email} #{password}"
-  end
+  has_secure_password
+  has_many :todos
+
+  # def to_pleasant_string
+  #   "#{first_name} #{email} #{password}"
+  # end
 end
