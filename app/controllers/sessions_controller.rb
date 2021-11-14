@@ -11,7 +11,8 @@ class SessionsController < ApplicationController
       session[:current_user_id] = user.id
       redirect_to "/"
     else
-      render plain: "incorrect"
+      flash[:error] = "Invalid login. Please retry."
+      redirect_to new_session_path
     end
   end
 

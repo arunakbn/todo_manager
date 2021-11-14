@@ -19,3 +19,10 @@
   display: flex;
   justify-content: space-between;
 }
+
+.flash-error {
+  color: darkred;
+  margin: 40px 0 20px 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
