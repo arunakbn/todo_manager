@@ -9,3 +9,11 @@
   font-family: sans-serif;
   font-size: 16px;
 }
+
+.user-header {
+  padding: 10px;
+  font-family: sans-serif;
+  background-color: lightgray;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
