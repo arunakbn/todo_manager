@@ -11,14 +11,10 @@ Password: testpassword
 
 Here are some screenshots of the project-
 
-Home page
 ![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/1.png)
 
-Sign up page
 ![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/2.png)
 
-Sign in page
 ![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/3.png)
 
-Todos page
 ![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/4.png)
