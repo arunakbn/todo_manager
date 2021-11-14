@@ -5,30 +5,23 @@ class UsersController < ApplicationController
     render "users/new"
   end
 
-  # def index
-  #   render plain: User.all.map { |user| user.to_pleasant_string }.join("\n")
-  # end
-
   def create
     first_name = params[:first_name]
     last_name = params[:last_name]
     email = params[:email]
     password = params[:password]
-    new_user = User.create!(
+    new_user = User.new(
       first_name: first_name,
       last_name: last_name,
       email: email,
       password: password,
     )
-    # session[:current_user_id] = new_user.id
-    redirect_to "/"
-    # render plain: "New user has been created with name #{new_user.first_name} and email #{new_user.email}"
+    if new_user.save
+      session[:current_user_id] = new_user.id
+      redirect_to "/"
+    else
+      flash[:error] = new_user.errors.full_messages.join(", ")
+      redirect_to new_user_path
+    end
   end
-
-  # def login
-  #   email = params[:email]
-  #   password = params[:password]
-  #   user = User.find_by(email: email, password: password)
-  #   render plain: user.present?
-  # end
 end

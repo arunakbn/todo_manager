@@ -12,12 +12,6 @@ class TodosController < ApplicationController
   def create
     todo_text = params[:todo_text]
     due_date = params[:due_date]
-    # if params[:due_date]
-    #   due_date = DateTime.parse(params[:due_date])
-    # else
-    #   due_date = nil
-    # end
-    # due_date = DateTime.parse(params[:due_date])
     new_todo = Todo.new(
       todo_text: todo_text,
       due_date: due_date,
