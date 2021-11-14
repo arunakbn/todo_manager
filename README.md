@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Todo Manager SaaS application made by Dr. Arunakumari BN of BMSIT&M as a part of the WD201 course by Pupilfirst School.
+The project is live at https://arunakbn-todo-manager-saas-201.herokuapp.com/
 
-Things you may want to cover:
 
-* Ruby version
+Demo login credentials-
+Email: testuser@gmail.com
+Password: testpassword
 
-* System dependencies
 
-* Configuration
+Here are some screenshots of the project-
 
-* Database creation
+Home page:
+![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/1.png)
 
-* Database initialization
+Sign up page:
+![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/2.png)
 
-* How to run the test suite
+Sign in page:
+![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/3.png)
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Todos page:
+![alt text](https://raw.githubusercontent.com/arunakbn/todo_manager/main/WD201%20Screenshots%20for%20README.md/4.png)
