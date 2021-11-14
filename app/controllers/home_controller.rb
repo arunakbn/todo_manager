@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    render "home/index"
+    render "index"
   end
 end
