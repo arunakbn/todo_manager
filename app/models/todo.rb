@@ -21,4 +21,8 @@ class Todo < ActiveRecord::Base
   def self.completed
     where(completed: true)
   end
+
+  def self.of_user(user)
+    where(user_id: user.id)
+  end
 end
